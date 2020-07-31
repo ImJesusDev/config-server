@@ -1,0 +1,7 @@
+sudo: required
+services:
+    - docker
+before_install:
+    - docker build -t jdiaz/config-server --build-arg ENC_PASS=$JASYPT_PASS .
+script:
+    - docker run -p 8888:8888 --name config-server jdiaz/config-server:latest
