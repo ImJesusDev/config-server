@@ -1,4 +1,4 @@
-FROM openjdk:12
+FROM openjdk:12-alpine
 VOLUME /tmp
 ARG ENC_PASS
 ENV JASYPT_PASS ${ENC_PASS}

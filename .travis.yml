@@ -8,4 +8,4 @@ services:
 before_install:
     - mvn clean install -Djasypt.encryptor.password=${JASYPT_PASS}
 script:
-    - docker build -t jdiaz/config-server  --build-arg ENC_PASS=$JASYPT_PASS .
+    - docker build -t jdiaz740/config-server  --build-arg ENC_PASS=$JASYPT_PASS .
